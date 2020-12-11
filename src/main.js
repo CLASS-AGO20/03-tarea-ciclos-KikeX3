@@ -37,6 +37,24 @@ export default class App {
             i++;
         }while(i<numero);
         }
+       
+    obtenerMultiplos(inicio,fin){
+        let i = inicio;
+        let multip = " ";
+
+        do{
+            if(i % 3===0){
+                multip = multip + i;
+                multip = multip.toString();
+            }
+            i++
+        } while(i<=fin);
+       return multip;
+    }
+
+    obtenerImpares(numero1,numero2){
+
+    }
  }
 
 
@@ -48,3 +66,5 @@ console.log(app.sumatoriaSerieDos(5));
 
 console.log(app.esPrimo(5));
 console.log(app.esPrimo(4));
+
+console.log(app.obtenerMultiplos(10,25));
