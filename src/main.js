@@ -26,16 +26,19 @@ export default class App {
     }
 
     esPrimo(numero){
-        let i = 2;
-
+        let i = numero;
+        let primo = 0;
         do{
-            if(numero%i==0){
-                return false;
-            }else{
-                return true;
+            if(numero % i ===0){
+                primo ++;
             }
-            i++;
-        }while(i<numero);
+            i--;
+        }while(i >= 1);
+        if(primo === 2){
+            return true;
+        } else {
+            return false;
+        }
         }
        
     obtenerMultiplos(inicio,fin){
@@ -47,7 +50,7 @@ export default class App {
                 multip = multip + i;
                 
             }
-            i++
+            i++;
         } while(i<=fin);
        return multip;
     }
@@ -65,6 +68,6 @@ console.log(app.sumatoriaSerieUno(5));
 console.log(app.sumatoriaSerieDos(5));
 
 console.log(app.esPrimo(5));
-console.log(app.esPrimo(4));
+console.log(app.esPrimo(21));
 
 console.log(app.obtenerMultiplos(20,35));
